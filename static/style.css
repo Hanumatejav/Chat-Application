@@ -1,0 +1,250 @@
+/* ========== GLOBAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background: #0f1115;
+    color: #e6e6e6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== HEADER ========== */
+h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+     /*changed above value of 600 to 700  */
+    color: #a8b3cf;
+    border-bottom: 1px solid #1c2230;
+}
+
+/* ========== TOP BAR ========== */
+.top-section {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #1c2230;
+    border-radius: 10px;
+    outline: none;
+    background: #151a23;
+    color: #e6e6e6;
+}
+
+#username, #roomPassword {
+    flex: 1;
+    min-width: 120px;
+}
+
+
+input::placeholder {
+    color: #6b7280;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #2b6cff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1f55d6;
+}
+
+/* ========== STATUS BAR (SIDEBAR LINE 1) ========== */
+#status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #9aa4b2;
+
+    border-left: 3px solid #2b6cff;  /* 🔵 LEFT SIDEBAR LINE */
+    margin: 0 10px;
+    background: #121722;
+    border-radius: 6px;
+}
+
+#statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff4d4d;
+}
+
+/* ========== CHAT AREA ========== */
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    margin: 5px 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-left: 3px solid #2b6cff; /* 🔵 SAME SIDE LINE FOR CHAT AREA */
+    border-radius: 8px;
+}
+
+/* ========== MESSAGE ROW ========== */
+.row {
+    display: flex;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+/* ========== BUBBLES ========== */
+.bubble {
+    max-width: 70%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.me {
+    background: #2b6cff;
+    color: white;
+}
+
+.other {
+    background: #1b2230;
+    color: #d1d5db;
+}
+
+.message-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.time {
+    font-size: 8px;
+    opacity: 0.5;
+    text-align: right;
+    /* margin-top: 5px; */
+}
+
+/* ========== INPUT AREA (SIDEBAR LINE 2) ========== */
+.bottom {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #121722;
+    border-top: 1px solid #1c2230;
+
+    border-left: 3px solid #2b6cff; /* 🔵 SAME LINE FOR INPUT AREA */
+}
+
+#messageInput {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #1c2230;
+    outline: none;
+    background: #151a23;
+    color: #e6e6e6;
+
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.chat-img {
+    max-width: 200px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 600px) {
+    .bubble {
+        max-width: 90%;
+        font-size: 13px;
+    }
+}
+
+
+/* ========== CUSTOM CHAT SCROLLBAR ========== */
+
+/* width */
+#messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* track (background) */
+#messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* scrollbar thumb */
+#messages::-webkit-scrollbar-thumb {
+    background: #2b6cff;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+/* hover effect */
+#messages::-webkit-scrollbar-thumb:hover {
+    background: #1f55d6;
+}
+
+/* Firefox support */
+#messages {
+    scrollbar-width: thin;
+    scrollbar-color: #2b6cff transparent;
+}
+
+/* ========== CUSTOM CHAT SCROLLBAR ========== */
+
+/* width */
+#messageInput::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* track (background) */
+#messageInput::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* scrollbar thumb */
+#messageInput::-webkit-scrollbar-thumb {
+    background: #2b6cff;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+/* hover effect */
+#messageInput::-webkit-scrollbar-thumb:hover {
+    background: #1f55d6;
+}
+
+/* Firefox support */
+#messageInput {
+    scrollbar-width: thin;
+    scrollbar-color: #2b6cff transparent;
+}

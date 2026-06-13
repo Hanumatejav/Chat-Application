@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Realtime Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1>Realtime Chat</h1>
+        <div class="top-section">
+            <input id="username" placeholder="Username">
+            <input id="roomPassword" type="password" placeholder="Password">
+            <button onclick="connectSocket()">Connect</button>
+        </div>
+
+        <div id="status">
+            <div id="statusDot"></div>
+            <span id="statusText">Disconnected</span>
+        </div>
+
+        <div id="messages"></div>
+
+        <div class="bottom">
+            <!-- 📎 FILE INPUT -->
+        <input type="file" id="fileInput" hidden onchange="uploadImage(event)">
+        <button onclick="document.getElementById('fileInput').click()">📎</button>
+            <textarea id="messageInput" rows="1" placeholder="Type message..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <script src="/static/script.js"></script>
+    </body>
+</html>
