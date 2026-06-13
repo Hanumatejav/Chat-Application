@@ -41,6 +41,7 @@ function connectSocket() {
         if (data.type === "image") {
 
             bubble.innerHTML = `<div class="message">
+                <div class="sender">${data.sender}</div>
                 <div class="message-text">
                     <img src="${data.url}" class="chat-img"/>
                 </div>
@@ -51,6 +52,7 @@ function connectSocket() {
         // 💬 TEXT MESSAGE
         else {
         bubble.innerHTML = `<div class="message">
+            <div class="sender">${data.sender}</div>
             <div class="message-text">${data.message}</div>
             <div class="time">${new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</div></div>
         `;
