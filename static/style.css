@@ -137,6 +137,14 @@ button:hover {
     color: #d1d5db;
 }
 
+
+.sender {
+    font-size: 8px;
+    opacity: 0.5;
+    text-align: left;
+    /* margin-bottom: 5px; */
+}
+
 .message-text {
     white-space: pre-wrap;
     word-break: break-word;
