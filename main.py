@@ -8,7 +8,7 @@ import uuid
 app = FastAPI()
 
 connections = []
-ROOM_PASSWORD = "123"
+ROOM_PASSWORD = "2325"
 
 UPLOAD_DIR = "static/uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
